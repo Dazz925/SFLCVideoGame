@@ -19,21 +19,87 @@ But there&#39;s someone else here. He&#39;s wearing a ten gallon hat and has a w
 &quot;Here&#39;s a gun. Take it. Shoot me. You won&#39;t.&quot;
 [[Refuse gun]]
 [[Admire gun]]</tw-passagedata><tw-passagedata pid="3" name="Refuse gun" tags="" position="412,54" size="100,100">You look over the gun, but it&#39;s not something that really catches your fancy. You&#39;re here to learn, not kill.
+
+(set: $hesitation to true)
+
 [[Smith admires you]]</tw-passagedata><tw-passagedata pid="4" name="Admire gun" tags="" position="400,263" size="100,100">It&#39;s a fascinating piece of machinery. And wow, six chambers? What years is this? The magic must&#39;ve worked. You&#39;re in a steampunk western!
 [[Smith admires you]] </tw-passagedata><tw-passagedata pid="5" name="Smith admires you" tags="" position="607,185" size="100,100">&quot;Don&#39;t want this gun then? Fine, I&#39;ll do the shooting. But I fancy a different mind for different thoughts.&quot;
 &quot;Tell me then friend, where should these bullets fly? There&#39;s a town over yonder. Winding Desperation they call it. Guess they ran out though. The town&#39;s overrun with them snake-kind. Bastards.&quot;
 &quot;We can go and alleviate the snakes. Or we can the fight to them. I&#39;ve been wracking my brain about the choice. What say you?
+(if: $hesitation is true)[And don&#39;t worry. We don&#39;t have to shoot anybody. Yet.]
+
 [[We help Winding Desperation]]
 [[To the snake fortress]]
-[[Inspect Smith]]</tw-passagedata><tw-passagedata pid="6" name="We help Winding Desperation" tags="" position="904,240" size="100,100">You guys will help town.
+[[Inspect Smith]]</tw-passagedata><tw-passagedata pid="6" name="We help Winding Desperation" tags="" position="904,240" size="100,100">Wait, you&#39;ve been here before.
+Well, not really. Not here. You&#39;ve been in this story though. This is Wild Wild Snake!
+It&#39;s the book you were offered. You&#39;ve been transported into the story, somehow. And this is Wild Smith!
+A choice? Smith had always chosen to follow the Oversnake.
+Well, if choices were now in play...
+... What would happen if you took the novel off of its given course?
+Would it just end? End up somewhere it was never meant to go?
+Or was there really a whole world in here to explore?
 
-[[Otherwise, Smith joins character in charge]]</tw-passagedata><tw-passagedata pid="7" name="To the snake fortress" tags="" position="1484,237" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Inspect Smith" tags="" position="637,34" size="100,100">He&#39;s grim. A dour fellow.
+You tell Wild Smith that your calling in life is to save those that cannot save themselves.
+
+[[Smith grins to himself]]</tw-passagedata><tw-passagedata pid="7" name="To the snake fortress" tags="" position="1484,237" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Inspect Smith" tags="" position="637,34" size="100,100">He&#39;s grim. A dour fellow.
 
 Dark cheeks. Dark eyes. Dark demeanor. He&#39;s been through a lot.
 
 That tattoo of a snake--it&#39;s raised, protruding from his skin. Maybe it&#39;s not a tattoo? Maybe it&#39;s a part of him.
 
-[[Smith admires you]] </tw-passagedata><tw-passagedata pid="9" name="Otherwise, Smith joins character in charge" tags="" position="730,385" size="100,100"></tw-passagedata></tw-storydata>
+(set: $inspection to true)
+
+[[Smith admires you]] </tw-passagedata><tw-passagedata pid="9" name="Smith grins to himself" tags="" position="729,324" size="100,100">&quot;Should have known you were a goody two shoes.&quot;
+He looks off and into the horizon, sand blown on the wind now caking his brow.
+&quot;Perhaps that&#39;s for the best though.&quot;
+&quot;You&#39;ve been on the hunt long enough and you start to forget that you&#39;re not the only one out here.&quot;
+&quot;Lot of good people back in Winding Desperation, and they&#39;ll all need our help, if you&#39;re willing to give it.&quot;
+(if: $hesitation is true)[&quot;Needs to be said though, I can&#39;t promise there&#39;ll be no fighting, when it comes down to it.]
+Smith reaches behind his back and then produces a revolver, holding it out before him, handle toward you.
+[[Take the gun]]
+[[Refuse the gun]]</tw-passagedata><tw-passagedata pid="10" name="Take the gun" tags="" position="465,487" size="100,100">(if: $hesitation is true)[Didn&#39;t think you&#39;d grip it as well as you do. You were born to hold that thing. Hope you&#39;re born to shoot it too.]
+Smith just stands there, taking in the sight of you for a moment longer.
+&quot;Sorry,&quot; he says, &quot;just, you remind me of someone I used to know.&quot;
+&quot;But enough drawling and drooling. Time get back back to town and do some good.&quot;
+&quot;Last time I was there. Place was in shambles.&quot;
+Smith unlatches the holster for your pistol, tosses it over, and waits as you stow your new weapon.
+You sincerely hope you&#39;ll never have to use it.
+Even with the holster tightened across your waist, the gun sags against your pants.
+You feel it pulling you down the hard earth beneath you.
+Possible essay topic: effects of carrying around a weapon in a strange land on the human mind.
+
+[[Continue to Winding Desperation]]</tw-passagedata><tw-passagedata pid="11" name="Refuse the gun" tags="" position="645,486" size="100,100">Your fingers brush up against the butt of the revolver, but even without picking it up, you know what sort of weight this thing holds.
+It&#39;s not for someone like you.
+You shake your head at Wild Smith, and then take a step back.
+&quot;You&#39;ll take action, but you&#39;re not going to have the triggerfinger when it comes down to the fighting?&quot;
+&quot;I can respect a decision like that.&quot;
+&quot;Takes a strong man to be able to take a life.&quot;
+&quot;Takes a stronger man to be able to not.&quot;
+Smith nods to the horizon.
+&quot;We got about half a day left.&quot;
+&quot;Enough time to make it down to Desperation, and then a bit more after that.&quot;
+&quot;Better get a move on, if we know what&#39;s good for us.&quot;
+&quot;Trust me: snakes after dark are just about the worst thing in all the Thirteen Worlds.&quot;
+
+[[Continue to Winding Desperation]] </tw-passagedata><tw-passagedata pid="12" name="Continue to Winding Desperation" tags="" position="554,626" size="100,100">The sands of this world are tough on your ankles.
+You&#39;re more used to walking around the concrete of NSU than jumping through bluffs and dunes of this forgotten world.
+&quot;What sort of people even survive in these parts?&quot; you ask.
+Smith just looks at you for a long while, before he says, &quot;The kind with nowhere else to go.&quot;
+&quot;There&#39;s a reason they call it Winding Desperation.&quot;
+&quot;It&#39;s not the sort of place you come to retire at. In all the Thirteen Worlds, Number Four has to be the most backwater and broken of them.&quot;
+&quot;The people here come to do one thing.&quot;
+&quot;It&#39;s not living and it rhymes with pie.&quot;
+You nod your head. &quot;I get it.&quot;
+&quot;And don&#39;t forget it neither,&quot; Smith says.
+
+[[Arrive at Winding Desperation]]</tw-passagedata><tw-passagedata pid="13" name="Arrive at Winding Desperation" tags="" position="385,727" size="100,100">As Smith brings you over a rise, you see the two stretching out in a great yellow expanse below.
+It seems more like a dog caught out in the jungle by a boa constrictor, if you&#39;re being honest with yourself.
+What might have been the honest beginnings of a young town barely stands, held together by a gran total of no more than four nails.
+There&#39;s a water tower, a tavern (of course), a couple of houses, and is that a smithy?
+Eh, it doesn&#39;t matter, because choking the life out of this carcass are wires and pipes and spires of shining steel, all glimmering in the dying light of the sun.
+All of these steel protrusions wind their way out of the town and congeal together right outside, turning into a massive box of cogs and gears.
+
+[[Smith points to the metal box building]]</tw-passagedata><tw-passagedata pid="14" name="Smith points to the metal box building" tags="" position="541,828" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
